@@ -1,0 +1,85 @@
+.identifier {
+  display: flex;
+  padding: 1rem 20px;
+  margin-top: 2rem;
+  border-radius: 16px;
+  border: 2px solid #353841;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(90deg, #38393b, #07070900);
+  position: relative;
+  overflow: hidden;
+}
+
+.identifier::after {
+  content: "";
+  width: 3px;
+  border-radius: 50px;
+  height: 30px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: linear-gradient(180deg, #c7c8ca, #f6f6f68f);
+}
+
+.identifier svg {
+  height: 18px;
+  width: 18px;
+  fill: #c9c9c9;
+}
+
+.selector {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.4rem;
+}
+
+.selector button {
+  background: #070709;
+  border: 2px solid #373a43;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 10px 20px;
+  min-width: max-content;
+  color: #8991a3;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.selector button:hover {
+  color: #c99372;
+  background: #131315;
+}
+
+.selector button:last-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media screen and (max-width: 750px) {
+  .selector {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .selector {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.active {
+  background: linear-gradient(174deg, #d5a687, #e79a69) !important;
+  border: 2px solid #efac87 !important;
+  color: black !important;
+}

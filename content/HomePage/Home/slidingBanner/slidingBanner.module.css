@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 2rem;
+  scrollbar-width: none;
+}
+
+.swiperSlide {
+  display: flex !important;
+  justify-content: center;
+}

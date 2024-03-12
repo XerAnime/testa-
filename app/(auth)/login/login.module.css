@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.right {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.right .background {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.right .background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    #070709,
+    #0c0d10a1,
+    #0c0d1000,
+    transparent
+  );
+}
+
+.right .background img {
+  object-fit: cover;
+  object-position: 70%;
+  filter: blur(10px);
+}
+
+.info {
+  position: absolute;
+  z-index: 7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info .image img {
+  background: #ffffff12;
+  padding: 2px;
+  border-radius: 20rem;
+  object-fit: cover;
+}
+
+.info .image {
+  position: relative;
+}
+.info .image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000000, #00000014, #0c0d1000);
+  border-radius: 100rem;
+}
+
+.animeinfo {
+  position: absolute;
+  top: 75%;
+  text-align: center;
+}
+.animeinfo .title {
+  font-family: "poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.animeinfo .description {
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-align: center;
+  background: -webkit-linear-gradient(#eee, #444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #ffffff0f;
+}
+
+@media screen and (max-width: 1280px) {
+  .left {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100%;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .highlight {
+    max-width: 100%;
+    text-align: center;
+  }
+  .input,
+  .left form input[type="submit"] {
+    max-width: 100% !important;
+  }
+  .heading {
+    display: flex;
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .heading {
+    display: block;
+  }
+  .highlight {
+    max-width: 100%;
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .heading {
+    font-size: x-large;
+  }
+}

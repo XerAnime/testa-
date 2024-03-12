@@ -1,0 +1,70 @@
+.identifier {
+  display: flex;
+  padding: 1rem 20px;
+  margin-top: 2rem;
+  border-radius: 16px;
+  border: 2px solid #353841;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(90deg, #38393b, #07070900);
+  position: relative;
+  overflow: hidden;
+}
+
+.identifier::after {
+  content: "";
+  width: 3px;
+  border-radius: 50px;
+  height: 30px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: linear-gradient(180deg, #c7c8ca, #f6f6f68f);
+}
+
+.identifier svg {
+  height: 18px;
+  width: 18px;
+  fill: #c9c9c9;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 8px;
+}
+
+.pagination button {
+  display: flex;
+  padding: 9px;
+  font-size: 18px;
+  border-radius: 16px;
+  transition: 0.5s;
+  background: #070709;
+  border: 2px solid #9f9e9e85;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+.pagination button:hover,
+.pagination button.active {
+  border: 2px solid #daa28185;
+}
+
+.pagination .pageNumbers {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.pagination .pageNumbers button {
+  min-width: 42px;
+  display: grid;
+}

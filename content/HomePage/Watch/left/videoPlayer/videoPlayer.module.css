@@ -1,0 +1,49 @@
+iframe.container {
+  aspect-ratio: 16 / 9.1;
+}
+iframe.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 100%;
+  border-radius: 15px !important;
+  border: 2px solid #32353e !important;
+}
+
+.mediaPoster {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.mediaPoster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mediaPoster[data-visible] {
+  opacity: 1;
+}
+
+.loading {
+  aspect-ratio: 16 / 9.1;
+  max-width: 100%;
+  border-radius: 15px !important;
+  position: relative;
+  border-radius: 15px;
+  background: linear-gradient(
+    20deg,
+    #0c0d10,
+    #0c0d10a1,
+    #0c0d1000,
+    transparent
+  );
+}
